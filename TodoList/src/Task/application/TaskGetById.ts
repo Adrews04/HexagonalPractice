@@ -5,7 +5,9 @@ class TaskGetById {
         //inicialización
     }
 
-    async execute(id: number){
+    async execute(id: string){
         return this.repository.findById(id);
     }
 }
+
+export default TaskGetById;

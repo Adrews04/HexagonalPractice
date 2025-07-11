@@ -5,7 +5,9 @@ class TaskGetAll {
         //inicialización
     }
 
-    async execture() {
+    async execute() {
         return this.repository.findAll();
     }
 }
+
+export default TaskGetAll;

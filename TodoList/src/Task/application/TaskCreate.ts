@@ -1,11 +1,12 @@
 import TaskRepository from '../domain/repository';
+import Task from '../domain/task';
 
 class TaskCreate {
     constructor(private repository : TaskRepository){
         //inicialización
     }
-    async execute( title: string, description: string){
-        return this.repository.create(title, description);
+    async execute(task:Task){
+        return this.repository.create(task.title, task.description);
     }     
 }
 

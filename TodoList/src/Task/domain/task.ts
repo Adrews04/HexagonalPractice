@@ -1,10 +1,12 @@
-interface Task {
-    id: number;
-    title: string;
-    description: string;
-    completed: boolean;
-    createdAt: Date;
-    updatedAt: Date;
+class Task {
+    constructor(
+        public id: string,
+        public title: string,
+        public description: string,
+        public completed: boolean,
+        public createdAt: Date,
+        public updatedAt: Date,
+    ){}
 }
 
-export {Task};
+export default Task;

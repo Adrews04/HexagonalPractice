@@ -5,7 +5,9 @@ class TaskDelete{
         //inicializacion
     }
 
-    async execute(id: number){
+    async execute(id: string){
         return this.repository.delete(id);
     }
 }
+
+export default TaskDelete;

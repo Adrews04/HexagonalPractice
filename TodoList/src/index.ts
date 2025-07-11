@@ -1,4 +1,5 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import  taskRouter from './Task/infraestructure/ExpressTaskRouters';
 import dotenv from 'dotenv';
 import connectDB from './config/db';
 
@@ -9,11 +10,7 @@ const port = process.env.PORT || 3000;
 
 connectDB();
 
-app.use(express.json());
-
-app.get('/', (req: Request, res: Response) => {
-    res.send('Todo List API working!');
-})
+app.use('/tasks', taskRouter);
 
 app.listen(port, () =>{
     console.log(`Server llistening at http://localhost:${port}`)
