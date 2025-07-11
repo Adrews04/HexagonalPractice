@@ -10,7 +10,12 @@ const port = process.env.PORT || 3000;
 
 connectDB();
 
+
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
 app.use('/tasks', taskRouter);
+
 
 app.listen(port, () =>{
     console.log(`Server llistening at http://localhost:${port}`)
